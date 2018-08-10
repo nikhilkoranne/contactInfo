@@ -1,0 +1,33 @@
+<section id="contact">
+  <div class="container">
+    <div class="form-group mt-2 pull-right">
+      <button type="submit" ng-click="vm.addNew()" class="btn btn-default btn-sm" id="add">
+        <i class="fa fa-plus hand-cursor"></i>
+      </button>
+    </div>
+    <div class="table-responsive contact-list">
+      <table class="table table-hover">
+        <thead>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email Address</th>
+          <th>Phone Number</th>
+          <th>Status</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr ng-repeat="contact in vm.contactList" ng-click="vm.editContact(contact)">
+            <td>{{contact.firstName}}</td>
+            <td>{{contact.lastName}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.phone}}</td>
+            <td>{{contact.status ? 'Active': 'Inactive'}}</td>
+            <td ng-click="vm.removeContact($event, contact)">
+              <i class="fa fa-times fa-2x hand-cursor"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
