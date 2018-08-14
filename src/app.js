@@ -1,5 +1,5 @@
-angular.module('contactInfo', ['ngRoute', 'firebase'])
-  .config(function ($routeProvider) {
+angular.module('contactInfo', ['ngRoute', 'firebase', 'ngMessages'])
+  .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/contacts', {
       templateUrl: 'src/contact/contact-list.html',
       controller: 'ContactListController',
@@ -13,7 +13,12 @@ angular.module('contactInfo', ['ngRoute', 'firebase'])
       .otherwise({
         redirectTo: '/contacts'
       });
-  });
+  }])
+  .config([
+    '$httpProvider', function ($httpProvider) {
+      $httpProvider.interceptors.push('LoadingIndicatorInterceptor');
+    }
+  ]);
 
 var config = {
   apiKey: 'AIzaSyAty--8PiG7PJm1AiUvZ33TzB8RG8CYDcU',
