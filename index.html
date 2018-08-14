@@ -6,26 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Web Developer</title>
+  <title>Contact Info</title>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-  <link href="css/main.min.css" rel="stylesheet">
-  <script src="lib/angular.js"></script>
-  <script src="lib/angular-route.js"></script>
-  <!-- Firebase -->
+  <link href="dist/main.min.css" rel="stylesheet">
+  <script src="vendor/angular/angular.min.js"></script>
+  <script src="vendor/angular/angular-route.min.js"></script>
+  <script src="vendor/angular/angular-messages.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-
-  <!-- AngularFire -->
   <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 </head>
 
 <body id="page-top" ng-app="contactInfo">
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Contacts</a>
+      <a class="navbar-brand js-scroll-trigger" href="#">Contacts</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
@@ -33,7 +30,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://nikhilkoranne.me" target="blank">
               About
             </a>
           </li>
@@ -49,18 +46,15 @@
       </div>
     </div>
   </footer>
+  <loader style="display: none"></loader>
 
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-  <script src="lib/jqBootstrapValidation.js"></script>
-  <script src="lib/contact_me.min.js"></script>
-  <script src="lib/main.min.js"></script>
-  <script src="src/app.js"></script>
-  <script src="src/contact/contact-list.controller.js"></script>
-  <script src="src/contact/contact-editor.controller.js"></script>
-  <script src="src/services/contact.service.js"></script>
+  <script src="dist/app.min.js"></script>
+  <script src="dist/common/loader.interceptor.min.js"></script>
+  <script src="dist/contact/contact-list.controller.min.js"></script>
+  <script src="dist/contact/contact-editor.controller.min.js"></script>
+  <script src="dist/services/contact.service.min.js"></script>
+  <script src="dist/common/loader.service.min.js"></script>
+  <script src="dist/common/loader.directive.min.js"></script>
 </body>
 
 </html>
